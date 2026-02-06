@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: educational-repo
+  labels:
+    app: educational-repo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: educational-repo
+  template:
+    metadata:
+      labels:
+        app: educational-repo
+    spec:
+      containers:
+        - name: educational-repo
+          image: docker.io/lynnhariri/educational-repo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: educational-repo
+  labels:
+    app: educational-repo
+spec:
+  selector:
+    app: educational-repo
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: ClusterIP
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: educational-repo
+spec:
+  to:
+    kind: Service
+    name: educational-repo
+  port:
+    targetPort: 3000

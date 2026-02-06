@@ -1,0 +1,432 @@
+export type ResourceCategory =
+  | "PROGRAMS"
+  | "COURSES"
+  | "TRAININGS"
+  | "ONLINE ACTIVITIES"
+  | "INTERNSHIP OPPORTUNITIES"
+  | "FREE"
+  | "GAMES"
+  | "WEBINARS"
+  ;
+
+export interface Resource {
+  id: number;
+  category: ResourceCategory[];
+  modeLabel: string[];
+  title: string;
+  description: string;
+  contact:string[];
+  audiences: string[];
+  certificate: string;
+  provider: string;
+  url: string;
+  language: string[];
+  target: string[];
+  prerequisite: string[];
+  contactName?: string;
+  contactEmail?: string;
+  type?: string;
+  format:string[];
+}
+
+
+export const resources: Resource[] = [
+  {
+    id: 1,
+    category: ["COURSES"],
+    contact:[],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Quantum Crypto",
+    description:
+      "This recent application simulates 3 different quantum communication protocols in the classroom. The general idea is that students are randomly paired with someone else of the classroom not knowing who that person is. All the Alices then have to do their part of the protocol and the Bobs have to do theirs for creating a secret key. They then apply their key to send/receive a message.",
+    audiences: ["Beginner","Intermediate","Advanced"],
+    certificate: "No",
+    provider: "University of Sherbrooke",
+    url: "https://www.quantumcrypto.app/",
+    language:["English","French","Spanish"],
+    target:["Beginner","Intermediate","Advanced"],
+    prerequisite:["None"],
+    format:["Videos","Educational Toolkits"]
+  },
+  {
+    id: 2,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "CERN openlab - Summer student lectures on quantum (Carla Sophie Rieger, Ema Puljak, Giulio Crognaletti )",
+    description:
+      "These summer student lectures are an introduction to quantum computing, quantum machine learning and optimisation, given by Carla Sophie Rieger, Ema Puljak and Giulio Crognaletti. Certificate delivered post-summer school (only given to CERN summer students)",
+    audiences: ["Beginner","Intermediate"],
+    certificate: "No",
+    provider: "CERN",
+    url: "https://indico.cern.ch/event/1408575//",
+    language:["English"],
+    target:["Beginner","Intermediate"],
+    prerequisite:["Basic trigonometry"],
+    format:["Videos","Educational Toolkits"]
+  },
+    {
+    id: 3,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "IBM Quantum Learning ",
+    description:
+      "Kickstart your quantum learning journey with a selection of courses designed to help you learn the basics or explore more focused topics. If you’re an instructor, explore content specifically tailored to incorporating quantum in the classroom.",
+    audiences: ["Beginner","Intermediate","Advanced"],
+    certificate: "Yes",
+    provider: "IBM",
+    url: "https://quantum.cloud.ibm.com/learning/en",
+    language:["English"],
+    target:["Beginner","Intermediate","Advanced"],
+    prerequisite:["Basic trigonometry"],
+    format:["Videos","Educational Toolkits"]
+  },
+      {
+    id: 4,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Black Opal - Learning Centre",
+    description:
+      "Black Opal is an interactive online learning platform designed to make quantum computing accessible to everyone. Whether you're a student, a developer curious about the field, or represent a business looking to empower your workforce, Black Opal offers an intuitive and engaging learning experience. You have to sign in to access the 10 learning modules, with the option of selecting the basic (free version) or pro (for organisations). Online glossary included.",
+    audiences: ["Beginner","Intermediate","Advanced"],
+    certificate: "Yes",
+    provider: "Q-CTRL",
+    url: "https://q-ctrl.com/black-opal",
+    language:["English"],
+    target:["Beginner","Intermediate","Advanced"],
+    prerequisite:["Basic trigonometry"],
+    format:["Videos","Educational Toolkits"]
+  },
+        {
+    id: 5,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Quantum for Everyone 2.0 (free sample)",
+    description: "Join QURECA’s Quantum Learning Platform for content in quantum technologies and practical applications, from beginner to advanced level. Free for 0.5h",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "QURECA ",
+    url: "https://lms.qureca.com/product/quantum-for-everyone-free-sample/?v=d88fc6edf21e",
+    language:["English"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+          {
+    id: 6,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Quantum Strategy for Business  (QS4B) (free sample) ",
+    description: "Quantum Strategy for Business (QS4B) course equips you with tools and frameworks essential for crafting a competitive business strategy aimed at securing a quantum advantage for you and your organization. By learning how to maximize your strategic leverage, you can achieve long-term business goals and objectives through an in-depth strategy formulation and its effective implementation. Free for 0.5h",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "QURECA",
+    url: "https://lms.qureca.com/product/quantum-strategy-for-business-free-sample/?v=d88fc6edf21e",
+    language:["English"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+            {
+    id: 7,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Quantum Myths",
+    description: "This course gives you an insight into varying, mostly broad statements regarding quantum technologies – especially quantum computing. In this course you can review and clarify diverse myths regarding the performance, potential and accessibility of quantum computers, as well as explore the link to other important technologies. You might have already met these interesting myths in your everyday life and wondered if they are true or not. 6 modules, 1,5h",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "QURECA, QTIndu, Technische Universität Braunschweig",
+    url: "https://lms.qureca.com/product/quantum-myths/?v=d88fc6edf21e",
+    language:["English","German"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+  {
+    id: 8,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "A practical introduction to quantum computing",
+    description: "A practical introduction to quantum computing. CERN openlab and the CERN Quantum Technology Initiative (QTI) have organised a series of seven open, free lectures on quantum computing. The talks will focus on the practical aspects of quantum computing and the course will also discuss the implementation of algorithms in quantum simulators and actual quantum computers (such as the ones available through the IBM Quantum Experience and D-Wave Leap). 7 lectures. No previous knowledge of quantum physics is required, and from a mathematical point of view, only a good command of basic linear algebra is assumed. Some familiarity with the python programming language would be helpful, but is also not required.",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "CERN QTI",
+    url: "https://quantum.cern/news/announcement/practical-introduction-quantum-computing-follow-our-online-lecture-series/",
+    language:["English","Python"],
+    target:["Beginner"],
+    prerequisite:["Basic trigonometry"],
+    format:["Educational Toolkits","Videos"]
+  },
+    {
+    id: 9,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Quantum Computing for Everyone - An Introduction",
+    description: "Two modules of 7h  in total (flexible): (1) Quantum Computing 101: History, Theory, and Basics. (2) Building Blocks of Quantum Computing",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "Coursera",
+    url: "https://www.coursera.org/learn/quantum-computing-for-everyone-an-introduction",
+    language:["English","French","Portuguese","Deutch","Spanish","Bahasa Indonesia"
+    ],
+    target:["Beginner"],
+    prerequisite:["Basic trigonometry","Basic knowledge of quantum physics"],
+    format:["Educational Toolkits"]
+  },
+  {
+    id: 10,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Introduction to quantum computing",
+    description: "Quantum computing is a developing field with enormous potential societal and economic impact. In the future, quantum computers will enable us to solve a range of complex problems that are currently intractable, potentially revolutionising key sectors including medicine, finance and the pharmaceutical industry. In this free course, you will learn how quantum computers exploit quantum mechanical properties, like superposition and entanglement, to deliver a computational power that goes way beyond the ability of classical computers. You will learn how different types of quantum gates act on qubits and analyse simple quantum circuits for yourself. 8 hours, 6 chapters + 1 summary.",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "Open Learn (The Open University)",
+    url: "https://www.open.edu/openlearn/science-maths-technology/introduction-quantum-computing/content-section-0?intro=1",
+    language:["English"],
+    target:["Beginner"],
+    prerequisite:["Basic trigonometry"],
+    format:["Educational Toolkits"]
+  },
+    {
+    id: 11,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Introduction to quantum computing",
+    description: "Discover quantum computing with this beginner-friendly course. Learn key concepts like qubits, superposition, and entanglement, explore practical applications in cryptography, optimisation, and machine learning, and get hands-on experience with quantum simulators. Perfect for students, tech enthusiasts, and professionals curious about the revolutionary future of computing, its challenges, and its real-world impact. 2 modules, 3-4h",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "Alison",
+    url: "https://alison.com/course/introduction-to-quantum-computing?utm_source=google&utm_medium=cpc&utm_campaign=Performance-Max_Tier-1_Tag-Food-Safety&gad_source=5&gad_campaignid=22826113093&gclid=EAIaIQobChMIiYyBzdGZkAMVKFuRBR1lljozEAAYAiAAEgKoufD_BwE",
+    language:["English"],
+    target:["Beginner"],
+    prerequisite:["Basic trigonometry"],
+    format:["Educational Toolkits"]
+  },
+  {
+    id: 12,
+    contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Quantum For Everyone",
+    description: "Free online courses on quantum technology  where you can learn the basics and the applications of quantum computing. The course is a mix of text, animations, multiple choice questions and videos with experts. You can pause at any moment and it's easy to log back in and continue where you left off. If you finish all nine tracks, you will receive your very own official certificate of participation.",
+    audiences: ["Beginner","Intermediate","Advanced"],
+    certificate: "Yes",
+    provider: "Quantum For Everyone",
+    url: "https://www.quantum-course.com/",
+    language:["English","French","Portuguese","Deutch","Spanish","German"],
+    target:["Beginner","Intermediate","Advanced"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+  {
+    id: 13,contact:[],
+    category:  ["COURSES","WEBINARS"],
+    modeLabel: ["ONLINE COURSE","WEBINAR"],
+    title: "QuTe - Quantum Teaching",
+    description: "An Erasmus+ Project funded by the European Union. Three teams of researchers working on quantum technologies and three high schools in Europe. Three modules: Qubits and Quantum Cryptography / Qubits and Quantum Computers / Physical Qubits and Experiments",
+    audiences: ["Beginner"],
+    certificate: "No",
+    provider: "QuTe - Quantum Teaching",
+    url: "http://sites.google.com/view/quantumteaching",
+    language:["English"],
+    target:["Beginner"],
+    prerequisite:["Basic trigonometry"],
+    format:["Educational Toolkits","Videos"]
+  },
+    {
+    id: 14,
+    contact:["Caterina Foti"],
+    category:  ["COURSES","GAMES","WEBINARS"],
+    modeLabel: ["ONLINE COURSE","GAME", "WEBINAR"],
+    title: "Qplaylearn",
+    description: "This team of scientists and communicators teach the beauty of quantum science and inform about the impact of quantum technologies to everyone. QPlayLearn's perspective stems from the recognition that different types of intelligence dominate the learning process of each person. You can start from the approach that feels easier or closer to you, then explore the others and see how your understanding of quantum physics shifts and expands.                 4 resources: QUEST-Quantum Dictionary / Photonic Trail / Q|cards> / Quantum Pills",
+    audiences: ["Beginner","Intermediate","Advanced"],
+    certificate: "No",
+    provider: "Qplaylearn",
+    url: "https://qplaylearn.com/education",
+    language:["English"],
+    target:["Beginner","Intermediate","Advanced"],
+    prerequisite:["None"],
+    format:["Educational Toolkits","Videos"]
+  },
+
+     {
+    id: 15,
+    contact:["Lucia Garbini"],
+    category:  ["COURSES", "WEBINARS"],
+    modeLabel: ["ONLINE COURSE","WEBINAR"],
+    title: "Quantum Quest",
+    description: "Embark on your journey in quantum! Discover our approach to quantum computing through our interactive learning platform. We've built Quantum Quest to suit your needs, fitting for beginners and experts alike. 5 modules: 1) Introduction 2) Mathematics 3) Physics 4) Optimization 5) Machine Learning",
+    audiences: ["Beginner","Intermediate"],
+    certificate: "No",
+    provider: "Pasqal",
+    url: "https://community.pasqal.com/learning",
+    language:["English"],
+    target:["Beginner","Intermediate"],
+    prerequisite:["Basic trigonometry"],
+    format:["Educational Toolkits","Videos"]
+  },
+       {
+    id: 16,contact:[],
+    category:  ["WEBINARS"],
+    modeLabel: ["WEBINAR"],
+    title: "Curso de introducción a la computación cuántica (2017)",
+    description: "20 video courses on YouTube ",
+    audiences: ["Beginner"],
+    certificate: "No",
+    provider: "Salvador E. Venegas-Andraca",
+    url: "https://www.youtube.com/@SalvadorEVenegasAndraca/playlists",
+    language:["English","Spanish"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Videos"]
+  },
+   {
+    id: 17,contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "My Photonic Ship",
+    description: "New quantum outreach event for high school and university-level students that introduces quantum superposition through photon simulations, followed by a gentle mathematical explanation. Afterwards, participants develop a simple classical game in Python and then extend it by incorporating quantum superposition. Full workshop: 3 + 3h",
+    audiences: ["Beginner","Intermediate"],
+    certificate: "No",
+    provider: "Abuzer Yakaryilmaz",
+    url: "https://learnquantum.github.io/my-photonic-ship/intro.html",
+    language:["English","Python"],
+    target:["Beginner","Intermediate"],
+    prerequisite:["Basic trigonometry"],
+    format:["Educational Toolkits"]
+  },
+   {
+    id: 18,contact:[],
+    category: ["GAMES"],
+    modeLabel: ["GAME"],
+    title: "Quantum Enigmas",
+    description: "The Quantum Enigmas animated series features an introductory video to the key concepts of quantum computing followed by a series of enigmas to further develop your understanding of key quantum computing notions, in collaboration with IBM SkillsBuild.",
+    audiences: ["Beginner"],
+    certificate: "No",
+    provider: "University of Sherbrooke",
+    url: "https://www.usherbrooke.ca/iq/en/curieux-quantiques/quantum-enigmas",
+    language:["English","French"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Videos"]
+  },
+     {
+    id: 19,contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "ADEQUATE",
+    description: "The ADvanced End-to-end QUAntum computing TEchnical course (ADEQUATE), funded by the EIT Deep Tech Talent Initiative, provides an overview of the established quantum algorithms and computational techniques. Accessible to a broad audience, it has no requirement of prior familiarity with quantum physics. Expertise in Python required. 9 modules, 50h",
+    audiences: ["Intermediate"],
+    certificate: "Yes",
+    provider: "eit Tech Talent, QURECA, QWorld",
+    url: "https://lms.qureca.com/product/adequate/?v=d88fc6edf21e ",
+    language:["English","Python"],
+    target:["Intermediate"],
+    prerequisite:["Basic trigonometry","Basic knowledge of quantum physics"],
+    format:["Educational Toolkits"]
+  },
+       {
+    id: 20,contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Introduction to the Quantum Ecosystem (module)",
+    description: "This module will present an overview of the ecosystem being built around quantum computing, providing a solid foundation to understand the potential, opportunities, and strategies surrounding quantum technologies. 4 chapters, 1,5h",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "QURECA, QTIndu",
+    url: "https://lms.qureca.com/product/introduction-to-the-quantum-ecosystem-module/?v=d88fc6edf21e",
+    language:["English","Spanish"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+  {
+    id: 21,contact:[],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "Why is Quantum so special? Basic rules of quantum physics",
+    description: "This module is a qualitative journey through the basic rules of quantum physics, an introduction to the special and counterintuitive world of quantum. The learner will be guided through interesting phenomena, experimental setups and their (planned) application in the real world. 5 chapters, 2,5h",
+    audiences: ["Beginner"],
+    certificate: "Yes",
+    provider: "QURECA, QTIndu, Technische Universität Braunschweig",
+    url: "https://lms.qureca.com/product/introduction-to-the-quantum-ecosystem-module/?v=d88fc6edf21e",
+    language:["English","German"],
+    target:["Beginner"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+  {
+    id: 22,
+    contact:["Youssef Eldakar"],
+    category:  ["COURSES"],
+    modeLabel: ["ONLINE COURSE"],
+    title: "iQafé lecture series",
+    description: "Academy Platform Offering Accelerated, AI-powered High-Tech Learning & Training.",
+    audiences: ["Beginner","Intermediate","Advanced"],
+    certificate: "Yes",
+    provider: "iQafé",
+    url: "https://www.youtube.com/@iQafe/videos",
+    language:["English"],
+    target: ["Beginner","Intermediate","Advanced"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+  //   {
+  //   id: 23,contact:[],
+  //   category:  ["COURSES"],
+  //   modeLabel: ["ONLINE COURSE"],
+  //   title: "iQafé lecture series",
+  //   description: "Academy Platform Offering Accelerated, AI-powered High-Tech Learning & Training.",
+  //   audiences: ["Beginner","Intermediate","Advanced"],
+  //   certificate: "Yes",
+  //   provider: "Bibliotheca Alexandrina",
+  //   url: "https://www.youtube.com/@iQafe/videos",
+  //   language:["English"],
+  //   target: ["Beginner","Intermediate","Advanced"],
+  //   prerequisite:["None"],
+  //   format:["Educational Toolkits"]
+  // },
+      {
+    id: 23,
+    contact:[],
+    category:  ["WEBINARS"],
+    modeLabel: ["WEBINAR"],
+    title: "The Wiser",
+    description: "Discover the 2025 Quantum Program, an initiative designed to equip students with the tools to develop their quantum expertise and apply it in real-world projects with industry and government partners. This program features over 45 speakers, offering 35 hours of classroom learning combined with 6 weeks of hands-on, project-based experience. All recording of the classroom are available here",
+    audiences: ["Beginner","Intermediate"],
+    certificate: "No",
+    provider: "The Wiser",
+    url: "https://www.thewiser.org/quantum-programs/2025-quantum-program",
+    language:["English"],
+    target: ["Beginner","Intermediate"],
+    prerequisite:["None"],
+    format:["Educational Toolkits"]
+  },
+        {
+    id: 24,
+    contact:["Youssef Eldakar"],
+    category:  ["WEBINARS"],
+    modeLabel: ["WEBINAR"],
+    title: "Monthly Series",
+    description: "The Quantum AI Monthly Series is an ongoing initiative co-organized by the Bibliotheca Alexandrina and iQafé, aimed at building awareness, skills, and community around the fast-evolving intersection of quantum computing and artificial intelligence. Launched in December 2024, these monthly sessions underscore the BA’s commitment to advancing technological literacy and providing a platform for experts and enthusiasts to engage with cutting-edge developments in quantum computing and AI.",
+    audiences: ["Intermediate","Advanced"],
+    certificate: "No",
+    provider: "Bibliotheca Alexandrina",
+    url: "https://www.thewiser.org/quantum-programs/2025-quantum-program",
+    language:["English"],
+    target: ["Intermediate","Advanced"],
+    prerequisite:["Basic trigonometry","Basic knowledge of quantum physics"],
+    format:["Educational Toolkits"]
+  },
+];
