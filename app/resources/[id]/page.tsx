@@ -76,16 +76,16 @@ export default async function ResourceDetail({
       {resource.provider}
     </p>
   </div>
- <div className="h-10 w-px bg-[#d2d2d2]"></div>
+ {/* <div className="h-10 w-px bg-[#d2d2d2]"></div> */}
    {/* CONTACT */}
-  <div>
+  {/* <div>
     <p className="uppercase text-[11px] tracking-widest text-[#777]">
       CONTACT
     </p>
     <p className="text-[16px] font-semibold text-[#1a1b3a]">
       {resource.contact}
     </p>
-  </div>
+  </div> */}
 </div>
 
 
