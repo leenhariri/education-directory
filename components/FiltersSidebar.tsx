@@ -8,7 +8,7 @@ const FILTERS: ResourceCategory[] = [
   "COURSES",
   "GAMES",
   "WEBINARS",
-  "SIMULATORS"
+  // "SIMULATORS"
 //   "TRAININGS",
 //   "ONLINE ACTIVITIES",
 

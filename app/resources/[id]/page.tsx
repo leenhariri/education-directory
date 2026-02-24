@@ -59,9 +59,16 @@ export default async function ResourceDetail({
     <p className="uppercase text-[11px] tracking-widest text-[#777]">
       TYPE
     </p>
-    <p className="text-[16px] font-semibold text-[#1a1b3a]">
-      {resource.modeLabel}
-    </p>
+<p className="text-[16px] font-semibold text-[#1a1b3a]">
+  {resource.modeLabel.map((label, index) => (
+    <span key={index}>
+      {label}
+      {index !== resource.modeLabel.length - 1 && (
+        <span className="mx-2 text-[#bbb]">,</span>
+      )}
+    </span>
+  ))}
+</p>
   </div>
 
   {/* Divider */}

@@ -7,7 +7,17 @@ export default function ResourceCard({ resource }: Props) {
 
   return (
 <Link
-  href={`/resources/${resource.id}`}
+      href={`/resources/${resource.id}`}
+      onClick={() => {
+        if (typeof window !== "undefined" && (window as any)._paq) {
+          (window as any)._paq.push([
+            "trackEvent",
+            "Resource",
+            "Card Click",
+            `${resource.title} (${resource.id})`,
+          ]);
+        }
+      }}
   className="
     group
     block
